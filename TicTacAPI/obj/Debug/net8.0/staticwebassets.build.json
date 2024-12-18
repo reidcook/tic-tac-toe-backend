@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "oznMCRGOxRZEiZKRV8p93CpoJdErzqhX/ZVESU5Rs3c=",
+  "Source": "TicTacAPI",
+  "BasePath": "_content/TicTacAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
