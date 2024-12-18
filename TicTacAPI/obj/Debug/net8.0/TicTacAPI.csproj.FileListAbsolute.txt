@@ -269,3 +269,4 @@ C:\Users\rcook\Desktop\TicTacAPI\TicTacAPI\bin\Debug\net8.0\Microsoft.Owin.Host.
 C:\Users\rcook\Desktop\TicTacAPI\TicTacAPI\bin\Debug\net8.0\Microsoft.Owin.Security.dll
 C:\Users\rcook\Desktop\TicTacAPI\TicTacAPI\bin\Debug\net8.0\Owin.dll
 C:\Users\rcook\Desktop\TicTacAPI\TicTacAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\rcook\Desktop\TicTacAPI\TicTacAPI\obj\Debug\net8.0\TicTacAPI.sourcelink.json

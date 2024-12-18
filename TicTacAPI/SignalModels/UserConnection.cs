@@ -2,7 +2,9 @@
 {
     public class UserConnection
     {
+        public int Id { get; set; }
         public string Username { get; set; } = String.Empty;
-        public required string GameId { get; set; }
+        public string GameId { get; set; } = String.Empty;
+        public string? ConnectionId {  get; set; }
     }
 }

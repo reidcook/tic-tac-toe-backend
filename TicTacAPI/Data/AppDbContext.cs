@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using TicTacAPI.SignalModels;
 
 namespace TicTacAPI.Data
 {
@@ -15,5 +16,6 @@ namespace TicTacAPI.Data
             options.UseNpgsql(_configuration.GetConnectionString("WebApiDatabase"));
         }
         public DbSet<Game> Games { get; set; }
+        public DbSet<UserConnection> Connections { get; set; }
     }
 }
