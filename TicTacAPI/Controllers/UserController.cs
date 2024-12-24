@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TicTacAPI.Data;
 
 namespace TicTacAPI.Controllers
@@ -50,6 +51,31 @@ namespace TicTacAPI.Controllers
         {
             await signInManager.SignOutAsync();
             return NoContent();
+        }
+
+        public class UserWins
+        {
+            public string name { get; set; }
+            public int wins { get; set; }
+            public UserWins(string name, int wins)
+            {
+                this.name = name;
+                this.wins = wins;
+            }
+        }
+
+        [HttpGet("leaderboard")]
+        [Authorize]
+        public async Task<List<UserWins>> leaderboard()
+        {
+            List<ApplicationUser> myUsers = await userManager.Users.ToListAsync();
+            List<UserWins> winsList = new List<UserWins>();
+            for(var i = 0; i < myUsers.Count(); i++)
+            {
+                int wins = (int)(myUsers[i].Wins == null ? 0 : myUsers[i].Wins);
+                winsList.Add(new UserWins(myUsers[i].UserName, wins));
+            }
+            return winsList;
         }
 
 

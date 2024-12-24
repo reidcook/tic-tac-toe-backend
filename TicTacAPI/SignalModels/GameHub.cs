@@ -131,6 +131,15 @@ namespace TicTacAPI.SignalModels
                     return true;
                 }
             }
+            //Checking diagonal
+            if (gameState[0] != "" & gameState[0] == gameState[4] & gameState[0] == gameState[8])
+            {
+                return true;
+            }
+            if (gameState[2] != "" & gameState[2] == gameState[4] & gameState[2] == gameState[6])
+            {
+                return true;
+            }
             return false;
         }
 

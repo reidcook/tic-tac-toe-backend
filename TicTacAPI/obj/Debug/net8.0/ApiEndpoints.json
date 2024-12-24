@@ -592,6 +592,26 @@
   },
   {
     "ContainingType": "TicTacAPI.Controllers.UserController",
+    "Method": "leaderboard",
+    "RelativePath": "User/leaderboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[TicTacAPI.Controllers.UserController\u002BUserWins, TicTacAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TicTacAPI.Controllers.UserController",
     "Method": "logout",
     "RelativePath": "User/logout",
     "HttpMethod": "POST",

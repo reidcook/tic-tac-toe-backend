@@ -640,6 +640,44 @@
         }
       }
     },
+    "/User/leaderboard": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserWins"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserWins"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserWins"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/UserConnections": {
       "get": {
         "tags": [
@@ -1244,6 +1282,20 @@
           "connectionId": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserWins": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "wins": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
